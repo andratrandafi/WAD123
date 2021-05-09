@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Hikey Hiking App</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+        <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+        <link href="css/tooplate-chilling-cafe.css" rel="stylesheet" />
+
+        <body>
+            <div class="tm-container">
+                <div class="tm-text-white tm-page-header-container">
+                    <img src="img/logo.png" alt="Logo" style="width:50px;height:50px;">
+                    <h1 class="tm-page-header">Hikey</h1>
+                </div>
+                <div class="tm-main-content">
+                    <div id="tm-intro-img"></div>
+
+                    <!-- About us -->
+                    <section class="tm-section tm-section-small">
+                        <h2 class="tm-section-header">Lespezi (M. Făgăraşului), 2517 m</h2>
+                        <p>
+5. Lespezi (M. Făgăraşului), 2517
+
+                        </p>
+
+                    </section>
+                    <hr />
+
+
+                    <!-- Mapa -->
+
+                    <section class="tm-section">
+
+                        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826778.2437047064!2d23.30450087901329!3d46.21989093137689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474ce9176f20bf61%3A0x765b4d8bda3b92f3!2sLespezi!5e0!3m2!1sen!2sro!4v1620503965023!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </p>
+
+                    </section>
+
+                    <hr />
+
+
+                    <center><a href="index.html">Back</a></center>
+
+
+                    <footer>
+                        <p class="tm-text-white tm-footer-text">
+                            Authors: Trandafir Andra and Mihaila Mihnea, 2021
+                        </p>
+                    </footer>
+                </div>
+                <script src="js/jquery-3.4.1.min.js"></script>
+                <script>
+                    $(function() {
+                        // Adjust intro image height based on width.
+                        $(window).resize(function() {
+                            var img = $("#tm-intro-img");
+                            var imgWidth = img.width();
+
+                            // 640x425 ratio
+                            var imgHeight = (imgWidth * 425) / 640;
+
+                            if (imgHeight < 300) {
+                                imgHeight = 300;
+                            }
+
+                            img.css("min-height", imgHeight + "px");
+                        });
+                    });
+                </script>
+                </body>
+            </html>
