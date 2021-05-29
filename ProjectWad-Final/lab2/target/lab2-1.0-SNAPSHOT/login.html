@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Hikey Hiking App</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+        <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+        <link href="css/tooplate-chilling-cafe.css" rel="stylesheet" />
+
+        <body>
+            <div class="tm-container">
+                <div class="tm-text-white tm-page-header-container">
+                    <img src="img/logo.png" alt="Logo" style="width:50px;height:50px;">
+                    <h1 class="tm-page-header">Hikey</h1>
+                </div>
+                <div class="tm-main-content">
+                    <div id="tm-intro-img"></div>
+
+                    <hr />
+
+
+                    <!-- Login -->
+
+                    <section class="tm-section">
+                        <h2 class="tm-section-header">Login</h2>
+                        <form method="POST" action="LoginController">
+                            <div class="form-element">
+                                <label for="username">Username</label>
+                                <input type="text" name="username1" id="username">
+                            </div>
+                            <div class="form-element">
+                                <label for="password">Password</label>
+                                <input type="password" name="password1" id="password">
+                            </div>
+
+                            <div class="form-element">
+                                <label for="maillist">Save password</label>
+                                <input type="checkbox" name="maillist" id="maillist">
+                            </div> 
+                            <div class="form-element">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </section>
+                    <hr />
+
+
+                    <footer>
+                        <p class="tm-text-white tm-footer-text">
+                            Authors: Trandafir Andra and Mihaila Mihnea, 2021
+                        </p>
+                    </footer>
+                    
+                </div>
+                <script src="js/jquery-3.4.1.min.js"></script>
+                <script>
+                    $(function() {
+                        // Adjust intro image height based on width.
+                        $(window).resize(function() {
+                            var img = $("#tm-intro-img");
+                            var imgWidth = img.width();
+
+                            // 640x425 ratio
+                            var imgHeight = (imgWidth * 425) / 640;
+
+                            if (imgHeight < 300) {
+                                imgHeight = 300;
+                            }
+
+                            img.css("min-height", imgHeight + "px");
+                        });
+                    });
+                </script>
+            </div>
+                </body>
+            </html>

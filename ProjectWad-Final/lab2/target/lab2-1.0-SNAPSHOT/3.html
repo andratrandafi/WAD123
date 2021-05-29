@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Hikey Hiking App</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+        <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+        <link href="css/tooplate-chilling-cafe.css" rel="stylesheet" />
+
+        <body>
+            <div class="tm-container">
+                <div class="tm-text-white tm-page-header-container">
+                    <img src="img/logo.png" alt="Logo" style="width:50px;height:50px;">
+                    <h1 class="tm-page-header">Hikey</h1>
+                </div>
+                <div class="tm-main-content">
+                    <div id="tm-intro-img"></div>
+
+                    <!-- About us -->
+                    <section class="tm-section tm-section-small">
+                        <h2 class="tm-section-header">Vistea Mare (M. Fagarasului), 2527 m</h2>
+                        <p>Vistea Mare is a mountain peak in the Fagaraș Mountains of the Southern Carpathians of Brasov County in Romania, with an elevation of 2,527 metres (8,291 ft).</p>
+                          <p>  It is the third highest peak in Romania after Moldoveanu Peak (2544m) and Negoiu Peak (2535m).</p>
+
+                    </section>
+                    <hr />
+
+
+                    <!-- Mapa -->
+
+                    <section class="tm-section">
+
+                        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44662.104721979566!2d24.70109541635903!3d45.60297602637476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474cc1aeca479627%3A0x2495aefc42803fc!2sVi%C8%99tea%20Mare!5e0!3m2!1sen!2sro!4v1620503925482!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </p>
+
+                    </section>
+
+                    <hr />
+
+
+                    <center><a href="index.html">Back</a></center>
+
+
+                    <footer>
+                        <p class="tm-text-white tm-footer-text" style="color:grey">
+                            Authors: Trandafir Andra and Mihaila Mihnea, 2021
+                        </p>
+                        <br>
+                    </footer>
+                </div>
+                <script src="js/jquery-3.4.1.min.js"></script>
+                <script>
+                    $(function() {
+                        // Adjust intro image height based on width.
+                        $(window).resize(function() {
+                            var img = $("#tm-intro-img");
+                            var imgWidth = img.width();
+
+                            // 640x425 ratio
+                            var imgHeight = (imgWidth * 425) / 640;
+
+                            if (imgHeight < 300) {
+                                imgHeight = 300;
+                            }
+
+                            img.css("min-height", imgHeight + "px");
+                        });
+                    });
+                </script>
+                <form method="POST" action="IndexController">
+                    <div>
+                        <center><h4 style="color:black;">Have you been there before? You can let us a review about the experience.</h4></center>
+                        <center><textarea name="comments3" id="comments3" style="font-family:sans-serif;font-size:1.2em;" rows="5" cols="40"></textarea></center>
+                    </div>
+                    <center><input type="submit" value="Submit"></center>
+                </form>
+                </div>
+                </body>
+            </html>
